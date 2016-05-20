@@ -6,9 +6,9 @@ public class MotoBoyBrasil extends MotoBoy {
 	@Override
 	public String resolver(TiposBairro delivery) {
 		if (delivery == TiposBairro.BRASIL){
-			return "O motoboy 0002 está disponível e é o mais indicado para essa entrega!";
+			return "Motoboy 002 disponível. A entrega será efetuada!";
 		}
-		
+	
 
 		return proximo.resolver(delivery);
 	}
