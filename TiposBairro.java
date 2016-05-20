@@ -4,7 +4,7 @@ public enum TiposBairro{
 	BRASIL,
 	CANDEIAS,
 	CENTRO,
-	RECREIO,
+	VILA_SERRANAS,
 	NENHUM_BAIRRO
 	
 	

@@ -10,7 +10,7 @@ import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoy;
 import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoyBrasil;
 import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoyCandeias;
 import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoyCentro;
-import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoyRecreio;
+import br.edu.ifba.mobile.wmobile.freedelivery.MotoBoyVilaSerranas;
 import br.edu.ifba.mobile.wmobile.freedelivery.TiposBairro;
 
 @ManagedBean(name = "ent")
@@ -35,7 +35,7 @@ public class Delivery {
 		tipos.add("Brasil");
 		tipos.add("Candeias");
 		tipos.add("Centro");
-		tipos.add("Recreio");
+		tipos.add("Vila Serranas");
 
 		return tipos;
 
@@ -49,13 +49,13 @@ public class Delivery {
 			tipo = TiposBairro.CANDEIAS;
 		} else if (tipoBairro.equals("Centro")) {
 			tipo = TiposBairro.CENTRO;
-		} else if (tipoBairro.equals("Recreio")) {
-			tipo = TiposBairro.RECREIO;
+		} else if (tipoBairro.equals("Vila Serranas")) {
+			tipo = TiposBairro.VILA_SERRANAS;
 		}
 		MotoBoy moto = new MotoBoyBrasil();
 		moto.setProximoMotoBoy(new MotoBoyCandeias());
 		moto.setProximoMotoBoy(new MotoBoyCentro());
-		moto.setProximoMotoBoy(new MotoBoyRecreio());
+		moto.setProximoMotoBoy(new MotoBoyVilaSerranas());
 
 		resultado = moto.resolver(tipo);
 
