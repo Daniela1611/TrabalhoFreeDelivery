@@ -57,6 +57,9 @@ public class Delivery {
 		moto.setProximoMotoBoy(new MotoBoyCentro());
 		moto.setProximoMotoBoy(new MotoBoyRecreio());
 
+		
+		System.out.println("Entrega enviada com sucesso ao motoboy!");
+		
 		resultado = moto.resolver(tipo);
 
 	}
